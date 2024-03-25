@@ -1,0 +1,15 @@
+# Menu settings for 'ru' locale
+
+main:
+- name: Статьи
+  url: /ru/posts/
+  weight: 1
+- name: Категории
+  url: /ru/categories/
+  weight: 2
+- name: Поиск
+  url: /ru/search/
+  weight: 3
+- name: Архив
+  url: /ru/archive/
+  weight: 4

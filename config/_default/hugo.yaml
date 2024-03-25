@@ -1,0 +1,82 @@
+baseURL: https://roaddust2.tatar/
+title: roaddust2.tatar
+theme: PaperModX
+
+
+# Main params
+params:
+  # Main settings
+  env: production
+  socialIcons:
+        - name: github-simple
+          title: Github
+          url: "https://github.com/roaddust2"
+        - name: rss-simple
+          title: RSS
+          url: "https://roaddust2.tatar/index.xml"
+  
+  # Theme settings
+  displayFullLangName: true
+  ShowBreadCrumbs: true
+  ShowReadingTime: true
+  ShowCodeCopyButtons: true
+  ShowPostNavLinks: true
+
+
+# Search settings
+
+outputs:
+  home:
+    - HTML
+    - RSS
+    - JSON # necessary for search
+
+
+# Misc
+
+enableRobotsTXT: true
+buildDrafts: false
+buildFuture: false
+buildExpired: false
+enableEmoji: true
+
+markup:
+    highlight:
+        noClasses: false
+
+permalinks:
+  posts: /:section/:year/:month/:slugorfilename
+
+
+# Language settings
+
+defaultContentLanguage: ru
+defaultContentLanguageInSubdir: true
+languages:
+  ru:
+    contentDir: content/ru
+    languageName: ":ru: Ru"
+    weight: 1
+    params:
+      description: "Заметки работника стартапа"
+
+      homeInfoParams:
+        Title: ":wave: Привет!"
+        Content: Добро пожаловать в хранилище моих инструкций, конфигураций, настроек серверов 
+          и других админских и дев ресурсов. Вместо того, чтобы полагаться на память, 
+          я решил документировать что-то здесь для удобства. Не стесняйся исследовать; 
+          возможно, ты найдешь что-то полезное. Или нет.
+
+  en:
+    contentDir: content/en
+    languageName: ":uk: En"
+    weight: 2
+    params:
+      description: "Notes of startup employee"
+
+      homeInfoParams:
+        Title: ":wave: Hello!"
+        Content: Welcome to my repository of instructions, configurations, server setups, 
+          and other administrative and development resources. Instead of relying on memory, 
+          I've documented everything here for easy reference. Feel free to explore; 
+          you might discover something helpful. Or not.

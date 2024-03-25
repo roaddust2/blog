@@ -1,0 +1,11 @@
+---
+title: 'Example'
+description: Some description for example post
+slug: example-post
+
+# categories:
+# tags:
+
+draft: true
+date: 2024-03-23T10:43:25+07:00
+---
