@@ -20,11 +20,14 @@ jobs:
         with:
           ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
 
-      - name: Install Hugo dependencies
-        run: snap install go --classic && snap install dart-sass        
+      - name: Install Go
+        run: sudo snap install go --classic
+
+      - name: Install dart-sass
+        run: sudo snap install dart-sass 
 
       - name: Install Hugo
-        run: snap install hugo
+        run: sudo snap install hugo
 
       - name: Build the website
         run: hugo
