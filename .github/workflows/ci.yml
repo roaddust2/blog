@@ -1,0 +1,42 @@
+name: CI
+
+on:
+  push:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout the current branch
+        uses: actions/checkout@v4
+
+      - name: Install LTS Node.js for ssh-agent v.0.9.0
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20.11.1'
+
+      - name: Initialize the ssh-agent
+        uses: webfactory/ssh-agent@v0.9.0
+        with:
+          ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
+
+      - name: Install Hugo dependencies
+        run: snap install go --classic && snap install dart-sass        
+
+      - name: Install Hugo
+        run: snap install hugo
+
+      - name: Build the website
+        run: hugo
+
+      - name: Scan the host key
+        run: mkdir -p ~/.ssh/ && ssh-keyscan -H $DEPLOY_SERVER >> ~/.ssh/known_hosts
+        env:
+          DEPLOY_SERVER: ${{ secrets.DEPLOY_SERVER }}
+
+      - name: Deploy the website
+        run: rsync -avz --delete --exclude '.ssh' public/ $DEPLOY_USERNAME@$DEPLOY_SERVER:$DEPLOY_PATH
+        env:
+          DEPLOY_SERVER: ${{ secrets.DEPLOY_SERVER }}
+          DEPLOY_USERNAME: ${{ secrets.DEPLOY_USERNAME }}
+          DEPLOY_PATH: ${{ secrets.DEPLOY_PATH }}
