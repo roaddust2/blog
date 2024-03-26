@@ -7,13 +7,6 @@ theme: PaperModX
 params:
   # Main settings
   env: production
-  socialIcons:
-        - name: github-simple
-          title: Github
-          url: "https://github.com/roaddust2"
-        - name: rss-simple
-          title: RSS
-          url: "https://roaddust2.tatar/index.xml"
   
   # Theme settings
   displayFullLangName: true
@@ -66,6 +59,13 @@ languages:
           и других админских и дев ресурсов. Вместо того, чтобы полагаться на память, 
           я решил документировать что-то здесь для удобства. Не стесняйся исследовать; 
           возможно, ты найдешь что-то полезное. Или нет.
+      socialIcons:
+        - name: github-simple
+          title: Github
+          url: "https://github.com/roaddust2"
+        - name: rss-simple
+          title: RSS
+          url: "https://roaddust2.tatar/ru/index.xml"
 
   en:
     contentDir: content/en
@@ -80,3 +80,10 @@ languages:
           and other administrative and development resources. Instead of relying on memory, 
           I've documented everything here for easy reference. Feel free to explore; 
           you might discover something helpful. Or not.
+      socialIcons:
+        - name: github-simple
+          title: Github
+          url: "https://github.com/roaddust2"
+        - name: rss-simple
+          title: RSS
+          url: "https://roaddust2.tatar/en/index.xml"
