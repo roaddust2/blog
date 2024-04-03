@@ -15,6 +15,9 @@ params:
   ShowCodeCopyButtons: true
   ShowPostNavLinks: true
 
+  # Analytics
+  goatcounter: roaddust2.tatar
+
 
 # Search settings
 
