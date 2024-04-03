@@ -1,5 +1,11 @@
-+++
-title = '{{ replace .File.ContentBaseName "-" " " | title }}'
-date = {{ .Date }}
-draft = true
-+++
+---
+title: 'Example'
+description: Some description for example post
+slug: example-post
+
+# categories: [""]
+# tags: [""]
+
+date: {{ .Date }}
+draft: true
+---
