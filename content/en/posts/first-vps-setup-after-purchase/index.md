@@ -65,10 +65,10 @@ The -t flag specifies the key type, I choose "ed25519", and -f allows us to sele
 ssh-keygen -t ed25519 -f ~/.ssh/vps
 ```
 
-We send the created key to the server for the root user using the "ssh-copy-id" utility. The -i flag is required to select a specific key. What is the -o flag for? It is not obvious, but when you try to add a key to the server, ssh-copy-id tries to log in to the server using the same key, although it is not installed yet, this leads to the error “Too many authentication failures”. Therefore, we use the flag for password authorization.
+We send the created public key to the server for the root user using the "ssh-copy-id" utility. The -i flag is required to select a specific key. What is the -o flag for? It is not obvious, but when you try to add a key to the server, ssh-copy-id tries to log in to the server using the same key, although it is not installed yet, this leads to the error “Too many authentication failures”. Therefore, we use the flag for password authorization.
 
 ```bash
-ssh-copy-id -i ~/.ssh/vps -o PubKeyAuthentication=no root@your_server_ip
+ssh-copy-id -i ~/.ssh/vps.pub -o PubKeyAuthentication=no root@your_server_ip
 ```
 
 Let's check if everything works (if it doesn't ask for a password, everything is ok):
