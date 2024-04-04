@@ -149,7 +149,7 @@ sudo ufw enable
 ```
 
 ```bash
-Command may disrupt existing ssh connections. Proceed with operation (y|n)? # Соглашаемся
+Command may disrupt existing ssh connections. Proceed with operation (y|n)? # y
 Firewall is active and enabled on system startup
 ```
 
