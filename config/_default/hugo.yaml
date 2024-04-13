@@ -58,11 +58,11 @@ languages:
       description: "Заметки работника стартапа"
 
       homeInfoParams:
-        Title: ":wave: Привет!"
-        Content: Добро пожаловать в хранилище моих инструкций, конфигураций, настроек серверов 
-          и других админских и дев ресурсов. Вместо того, чтобы полагаться на память, 
-          я решил документировать что-то здесь для удобства. Не стесняйся исследовать; 
-          возможно, ты найдешь что-то полезное. Или нет.
+        Title: ":wave: Добро пожаловать в мой блог!"
+        Content: Он содержит инструкции, конфигурации, настройки сервера, 
+          другие dev ресурсы, а также просто мои мысли и заметки. 
+          Вместо того, чтобы полагаться на память, я решил документировать что-то для удобства.
+          Не стесняйся исследовать; возможно, ты обнаружишь что-то полезное. Или нет.
       socialIcons:
         - name: github-simple
           title: Github
@@ -79,11 +79,11 @@ languages:
       description: "Notes of startup employee"
 
       homeInfoParams:
-        Title: ":wave: Hello!"
-        Content: Welcome to my repository of instructions, configurations, server setups, 
-          and other administrative and development resources. Instead of relying on memory, 
-          I've documented everything here for easy reference. Feel free to explore; 
-          you might discover something helpful. Or not.
+        Title: ":wave: Welcome to my blog!"
+        Content: It contains instructions, configurations, server setups, other development 
+          resources and some of my thoughts. Instead of relying on memory, 
+          I’ve documented everything there for easy reference. 
+          Feel free to explore; you might discover something helpful. Or not.
       socialIcons:
         - name: github-simple
           title: Github
