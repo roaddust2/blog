@@ -1,5 +1,5 @@
 ---
-title: 'Как установить Wireguard VPN на сервер с помощью Docker'
+title: '[Инфраструктура] Как установить Wireguard VPN на сервер с помощью Docker'
 description: Я просто хотел оплатить квартплату
 slug: kak-ustanovit-wireguard-vpn-s-pomoshiu-docker
 
